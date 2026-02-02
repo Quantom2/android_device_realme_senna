@@ -120,6 +120,7 @@ static void set_blink(uint32_t flashOnMs, uint32_t flashOffMs) {
 }
 
 static void handleNotification(const LightState& state) {
+    //uint32_t redBrightness, greenBrightness, blueBrightness, whiteBrightness;
     char buf[32];
     
     /* Turn panel off if COLOR = 0 */
@@ -130,6 +131,7 @@ static void handleNotification(const LightState& state) {
         return;
     } else {
         /* Write color directly without conversion */
+        //snprintf(buf, 32, "0x%08x", state.color);
         snprintf(buf, 32, "0x%02x 0x%02x 0x%02x 0x%02x", (state.color >> 24) & 0xFF, (state.color >> 16) & 0xFF, (state.color >> 8) & 0xFF, state.color & 0xFF);
         set(RGBCOLOR, buf);
         LIGHT_LOG("written color:%s\n", buf);

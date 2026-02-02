@@ -65,6 +65,15 @@ $(call soong_config_set,qtipower,mode_ext_lib,power-ext-oplus)
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oplus
 
+# IR
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
+PRODUCT_PACKAGES += \
+    android.hardware.ir-service.oplus
+
+# Gestures
+$(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch/include)
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
