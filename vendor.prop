@@ -10,3 +10,6 @@ persist.radio.multisim.config=dsds
 
 # USB
 vendor.usb.product_string=realme GT neo 5
+
+# Disable screen gamma
+sys.brightness.disable_gamma_conversion=1
