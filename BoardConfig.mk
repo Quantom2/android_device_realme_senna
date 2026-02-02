@@ -7,23 +7,29 @@
 # Include the common OEM chipset BoardConfig.
 include device/oneplus/sm8450-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/oneplus/ovaltine
+DEVICE_PATH := device/realme/senna
 
 # Kernel
-TARGET_KERNEL_CONFIG += vendor/oplus/ovaltine.config
+TARGET_KERNEL_CONFIG += vendor/oplus/senna.config
+
+# Display
+TARGET_SCREEN_DENSITY := 450
 
 # Partitions
 ifeq (,$(filter true, $(WITHOUT_RESERVED_SIZE) $(WITH_GMS)))
 BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 900000000
 endif
-BOARD_ONEPLUS_DYNAMIC_PARTITIONS_SIZE := 5637144572
-BOARD_SUPER_PARTITION_SIZE := 11274289152
+BOARD_ONEPLUS_DYNAMIC_PARTITIONS_SIZE := 7247757310 # ( BOARD_SUPER_PARTITION_SIZE / 2) - 2B?
+BOARD_SUPER_PARTITION_SIZE := 14495514624
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# Add for Iris5 compability
+TARGET_KERNEL_ADDITIONAL_FLAGS := OPLUS_VND_ENV_PW_X5_COMPATIBLE=yes
 
 # Recovery
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
 
 # Include the proprietary files BoardConfig.
-include vendor/oneplus/ovaltine/BoardConfigVendor.mk
+include vendor/realme/senna/BoardConfigVendor.mk

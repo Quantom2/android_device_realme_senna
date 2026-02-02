@@ -1,1 +1,1 @@
-require board=taro|OP5551L1|OP5552L1
+require board=taro|RE5860|RMX3706|RMX3708|RMX3709

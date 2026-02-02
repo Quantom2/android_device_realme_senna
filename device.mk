@@ -24,12 +24,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2412
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2772
+TARGET_SCREEN_WIDTH := 1240
+
+# Display
+TARGET_USES_PREBUILT_HWC := true
 
 # Display
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/display_id_4630947180710147970.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947180710147969.xml
+    $(LOCAL_PATH)/configs/display.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946336619243649.xml \
+    $(LOCAL_PATH)/configs/display.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946336619243650.xml
 
 # Fingerprint
 $(call soong_config_set,qtidisplay,oplus_udfps,true)
@@ -56,4 +60,4 @@ PRODUCT_SOONG_NAMESPACES += \
 $(call inherit-product, device/oneplus/sm8450-common/common.mk)
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oneplus/ovaltine/ovaltine-vendor.mk)
+$(call inherit-product, vendor/realme/senna/senna-vendor.mk)
