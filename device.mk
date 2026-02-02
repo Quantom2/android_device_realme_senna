@@ -74,6 +74,10 @@ PRODUCT_PACKAGES += \
 # Gestures
 $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch/include)
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator.service.oplus-richtap
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
