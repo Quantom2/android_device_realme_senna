@@ -1,9 +1,9 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 10T (CPH2415_15.0.0.1601(EX01)).
+## are from  realme GT Neo5 150w (RMX3706_15.0.0.510(CN01)).
 
 # Exceptions:
-# {abl, xbl, xbl_config}.img: from OnePlus 10T (CPH2417_13.1.0.583(EX01))
-abl.img;AB|b7a623c3136885fbfd26b19c8e76edc9740250f4
+# modem.img: from realme GT3 (RMX3709_15.0.0.510(EX01))
+abl.img;AB
 aop.img;AB
 aop_config.img;AB
 bluetooth.img;AB
@@ -15,7 +15,7 @@ featenabler.img;AB
 hyp.img;AB
 imagefv.img;AB
 keymaster.img;AB
-modem.img;AB
+modem.img;AB|fe979b0d1bd91067e9d723f14e19df97462a4d93
 oplus_sec.img;AB
 oplusstanvbk.img;AB
 qupfw.img;AB
@@ -24,6 +24,6 @@ splash.img;AB
 tz.img;AB
 uefi.img;AB
 uefisecapp.img;AB
-xbl.img;AB|df04531acb9c7ac715f38ee9ec576521e309bfba
-xbl_config.img;AB|dc1aee7ced14445e4cad9a0ddb2634029302a91f
+xbl.img;AB
+xbl_config.img;AB
 xbl_ramdump.img;AB
