@@ -61,6 +61,10 @@ PRODUCT_PACKAGES += \
 # Power
 $(call soong_config_set,qtipower,mode_ext_lib,power-ext-oplus)
 
+# Leds
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.oplus
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)

@@ -1,0 +1,17 @@
+service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.oplus
+    interface android.hardware.light@2.0::ILight default
+    class hal
+    user system
+    group system
+    shutdown critical
+
+on boot
+    chown system system /sys/class/leds/backpanel/mode
+    chown system system /sys/class/leds/backpanel/rgbcolor
+    chown system system /sys/class/leds/backpanel/timings
+    chmod 0600 /sys/class/leds/backpanel/mode
+    chmod 0600 /sys/class/leds/backpanel/rgbcolor
+    chmod 0600 /sys/class/leds/backpanel/timings
+    
+on property:sys.boot_completed=1
+    write /sys/kernel/oplus_display/aod_light_mode_set 1
