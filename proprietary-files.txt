@@ -1591,6 +1591,7 @@ odm/firmware/tp/22624/LIMIT_S3910_TIANMA_AGING.img
 odm/firmware/tp/22624/LIMIT_S3910_TIANMA_HBP.img
 
 # Vibrator
+odm/etc/aac_richtap.config
 odm/etc/vibrator/809/def/effect_0.bin
 odm/etc/vibrator/809/def/effect_1.bin
 odm/etc/vibrator/809/def/effect_2.bin
@@ -1768,10 +1769,6 @@ odm/etc/vibrator/815/soft/effect_7.bin
 odm/etc/vibrator/815/soft/effect_46.bin
 odm/etc/vibrator/815/soft/effect_109.bin
 odm/etc/vibrator/vibrator_effect.json
-
-# AAC Richtap (Service & config) - from bale-b RMX3852_16.0.2.499(CN01)
-odm/etc/aac_richtap.config|07ee823f2d93312b0326ca2b21f6ef145d00ce60
-vendor/lib64/libaacvibrator.so|75c4af92d9a1953b37ba1d9a69972fd5a2709a2d
 
 # VPU firmware
 vendor/firmware/vpu20_1v.mbn
