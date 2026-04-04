@@ -1,0 +1,127 @@
+Subject: [PATCH] hwc: Add Iris5 support for Senna
+<+>UTF-8
+===================================================================
+diff --git a/composer/Android.bp b/composer/Android.bp
+index 1e847ba419..8fd999ab42 100644
+--- a/composer/Android.bp
++++ b/composer/Android.bp
+@@ -26,6 +26,11 @@ cc_binary {
+             "-DPXLW_IRIS",
+         ],
+         default: [],
++    }) + select(soong_config_variable("qtidisplay", "pxlw_hw_iris5"), {
++        "true": [
++            "-DPXLW_IRIS5",
++        ],
++        default: [],
+     }),
+ 
+     shared_libs: [
+diff --git a/composer/hwc_display_builtin.cpp b/composer/hwc_display_builtin.cpp
+index 0d4e332322..97b0226937 100644
+--- a/composer/hwc_display_builtin.cpp
++++ b/composer/hwc_display_builtin.cpp
+@@ -485,10 +485,17 @@ HWC2::Error HWCDisplayBuiltIn::SetColorModeWithRenderIntent(ColorMode mode, Rend
+ #ifdef PXLW_IRIS
+   auto *iris_wrapper = pxlw::PxlwIrisWrapper::GetInstance();
+   if (iris_wrapper) {
++#ifdef PXLW_IRIS5
++    reinterpret_cast<pxlw::PxlwIris5Wrapper *>(iris_wrapper)
++        ->SetColorModeWithRenderIntent(
++            0, 0, static_cast<android::hardware::graphics::common::V1_2::ColorMode>(mode),
++            static_cast<android::hardware::graphics::common::V1_1::RenderIntent>(intent));
++#else
+     reinterpret_cast<pxlw::PxlwSoftirisWrapper *>(iris_wrapper)
+         ->SetColorModeWithRenderIntent(
+             0, 0, static_cast<android::hardware::graphics::common::V1_2::ColorMode>(mode),
+             static_cast<android::hardware::graphics::common::V1_1::RenderIntent>(intent));
++#endif
+   }
+ #endif
+ 
+diff --git a/composer/hwc_session.cpp b/composer/hwc_session.cpp
+index 84d6a6bf40..6b5c80424a 100644
+--- a/composer/hwc_session.cpp
++++ b/composer/hwc_session.cpp
+@@ -2720,6 +2720,17 @@ int HWCSession::CreatePrimaryDisplay() {
+         }
+ 
+ #ifdef PXLW_IRIS
++#ifdef PXLW_IRIS5
++        // HW Iris5 devices ship the Iris service + rc, so just initialize the Iris5 wrapper
++        // for the primary panel during bring-up.
++        auto *iris_wrapper = pxlw::PxlwIrisWrapper::GetInstance();
++        if (iris_wrapper) {
++          DisplayConfigVariableInfo config = {};
++          hwc_display[0]->GetDisplayAttributesForConfig(0, &config);
++          reinterpret_cast<pxlw::PxlwIris5Wrapper *>(iris_wrapper)
++              ->InitPrimaryDisplay(config.vsync_period_ns, config.x_pixels, config.y_pixels);
++        }
++#else
+         // This indirectly invokes IrisService constructor as required in devices
+         // with soft-iris that don't ship with iris-service binary.
+         auto *iris_wrapper = pxlw::PxlwIrisWrapper::GetInstance();
+@@ -2731,6 +2742,7 @@ int HWCSession::CreatePrimaryDisplay() {
+           reinterpret_cast<pxlw::PxlwSoftirisWrapper *>(iris_wrapper)
+               ->InitPrimaryDisplay(config.vsync_period_ns, config.x_pixels, config.y_pixels);
+         }
++#endif
+ #endif
+       } else {
+         DLOGE("Primary display creation has failed! status = %d", status);
+@@ -2777,6 +2789,16 @@ int HWCSession::HandleBuiltInDisplays() {
+       continue;
+     }
+ 
++#ifdef PXLW_IRIS5
++    // TEMP FIX for dual-iris mode: Do not connect ANY display.
++    // this should resemble stock behaviour, since decompiled HWC shows
++    // that conditions for registering secondary node never met
++    if (true) {
++      DLOGE("Builtin secondary display creation skipped");
++      continue;
++    }
++#endif
++
+     for (auto &map_info : map_info_builtin_) {
+       hwc2_display_t client_id = map_info.client_id;
+ 
+diff --git a/include/pxlw_iris_wrapper.h b/include/pxlw_iris_wrapper.h
+index e34c7e017d..1df38b508b 100644
+--- a/include/pxlw_iris_wrapper.h
++++ b/include/pxlw_iris_wrapper.h
+@@ -45,4 +45,18 @@ class PxlwSoftirisWrapper {
+   friend class PxlwIrisWrapper;
+ };
+ 
++// HW Iris 5 (HIDL-based) wrapper entry points exported by vendor libpwirishalwrapper.so.
++// Only used when SUPPORTS_PXLW_IRIS5 is defined.
++class PxlwIris5Wrapper {
++public:
++  int InitPrimaryDisplay(int32_t vsync_period_ns, uint32_t width, uint32_t height);
++  void SetColorModeWithRenderIntent(
++      int32_t display_id, int32_t, android::hardware::graphics::common::V1_2::ColorMode colorMode,
++      android::hardware::graphics::common::V1_1::RenderIntent renderIntent);
++
++private:
++    PxlwIris5Wrapper() = default;
++    friend class PxlwIrisWrapper;
++};
++
+ }  // namespace pxlw
+diff --git a/sdm/libs/core/Android.bp b/sdm/libs/core/Android.bp
+index a9b93fc462..8ce3e0a92e 100644
+--- a/sdm/libs/core/Android.bp
++++ b/sdm/libs/core/Android.bp
+@@ -21,6 +21,11 @@ cc_library_shared {
+             "-DPXLW_IRIS",
+         ],
+         default: [],
++    }) + select(soong_config_variable("qtidisplay", "pxlw_hw_iris5"), {
++        "true": [
++            "-DPXLW_IRIS5",
++        ],
++        default: [],
+     }),
+     shared_libs: [
+         "libdl",

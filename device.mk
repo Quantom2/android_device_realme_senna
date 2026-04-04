@@ -31,7 +31,8 @@ TARGET_SCREEN_HEIGHT := 2772
 TARGET_SCREEN_WIDTH := 1240
 
 # Display
-TARGET_USES_PREBUILT_HWC := true
+$(call soong_config_set,qtidisplay,pxlw_vendor_namespace,vendor/realme/senna)
+$(call soong_config_set,qtidisplay,pxlw_hw_iris5,true)
 
 # Display
 PRODUCT_COPY_FILES += \
@@ -72,7 +73,7 @@ $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch/
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
+    
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8450-common/common.mk)
 

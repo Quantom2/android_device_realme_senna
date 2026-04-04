@@ -1505,22 +1505,7 @@ vendor/etc/media_profiles_vendor.xml
 vendor/lib64/vendor.oplus.hardware.olc2-V1-ndk_platform.so
 
 # Display (HWC)
-odm/etc/vintf/manifest/manifest_oplus_cwb.xml
-odm/lib64/libdpservice.so
-odm/lib64/vendor.oplus.hardware.cwb@1.0.so;MODULE=vendor.oplus.hardware.cwb@1.0_odm
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
-vendor/lib64/libcwb_qcom.so
-vendor/lib64/libhistogram.so
-vendor/lib64/libqdutils.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmutils.so
 vendor/lib64/libPanelChaplin.so
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
-
-# Display (SDM)
-vendor/lib64/libdisplayskuutils.so:odm/lib64/libdisplayskuutils.so;MODULE_SUFFIX=_odm
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdmextension.so:odm/lib64/libsdmextension.so;MODULE_SUFFIX=_odm
 
 # Display (Pixelworks)
 odm/bin/hw/vendor.pixelworks.hardware.feature.irisfeature-service
