@@ -4,9 +4,6 @@
 # Current blobs with ELF checks disabled:
 
 # ACDB
-odm/etc/acdbdata/FTM/acdb_cal.acdb
-odm/etc/acdbdata/FTM/workspaceFileXml.qwsp
-odm/etc/acdbdata/MOS/acdb_cal.acdb
 odm/etc/acdbdata/Audio_Parameter_Version.txt
 odm/etc/acdbdata/acdb_cal.acdb
 
