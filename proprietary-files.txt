@@ -1408,6 +1408,12 @@ vendor/firmware/evautil64.mdt
 vendor/firmware/gmu_gen70000.bin
 
 # Display calibration data
+my_product/vendor/etc/display_apollo_list.xml:vendor/etc/display_apollo_list.xml
+my_product/vendor/etc/display_brightness_app_list.xml:vendor/etc/display_brightness_app_list.xml
+my_product/vendor/etc/display_apollo_list_single_pulse.xml:vendor/etc/display_apollo_list_single_pulse.xml
+my_product/vendor/etc/display_curve_map.xml:vendor/etc/display_curve_map.xml
+my_product/vendor/etc/display_apollo_list_id05_single_pulse.xml:vendor/etc/display_apollo_list_id05_single_pulse.xml
+my_product/vendor/etc/display_brightness_config_single_pulse_TM1240.xml:vendor/etc/display_brightness_config_single_pulse_TM1240.xml
 vendor/etc/display/qdcm_calib_data_boe_nt37705_dsc_cmd_mode_panel.json
 vendor/etc/display/qdcm_calib_data_tianma_nt37705_dsc_cmd_mode_panel.json
 vendor/etc/display/qdcm_calib_data_senna_ab575_tm_nt37705_dsc_cmd_mode_panel.json
