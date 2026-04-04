@@ -16,6 +16,11 @@ Battery | 5000 mAh/150w OR 4600 mAh/240w Charging
 Display | AMOLED, 6.74 inches, 1240 x 2772 pixels
 Extra   | Illuminated 4 channel RGB (on the back)
 
+## Device picture
+
+
+![realme-gt-neo5-1](https://github.com/user-attachments/assets/c2c036cd-40c3-4acf-a626-0b9d05805ffd)
+
 ## What doesn't work
 - Camera stabilisation
 - Screen anti flicker
