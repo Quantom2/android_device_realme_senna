@@ -1570,12 +1570,6 @@ vendor/lib64/sensors.ssc.so
 odm/lib64/libaiboost_qnn_sr.so
 odm/lib64/libaiboost_sr.so
 odm/lib64/libaiboost_ubwc.so
-vendor/etc/media_codecs_performance_cape_vendor.xml
-vendor/etc/media_codecs_vendor_audio.xml
-vendor/etc/media_profiles_vendor.xml
-
-# Oplus Log Core
-vendor/lib64/vendor.oplus.hardware.olc2-V1-ndk_platform.so
 
 # Display (HWC)
 vendor/etc/snapdragon_color_libs_config.xml
