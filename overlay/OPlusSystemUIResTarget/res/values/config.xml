@@ -4,7 +4,38 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <!-- Location on the screen of the center of the physical power button. This is a reasonable
+    default that should be overridden by device-specific overlays. -->
+    <dimen name="physical_power_button_center_screen_location_y">1200px</dimen>
 
     <!-- Whether to enable framework dimming for UDFPS -->
     <bool name="config_udfpsFrameworkDimming">true</bool>
+
+    <!-- Brightness-to-alpha lookup table (LUT) for UDFPS framework dimming.
+         Each entry is in the format <brightness>,<alpha> where:
+           - brightness = panel backlight level
+           - alpha = dim layer transparency applied at that brightness
+         Rules:
+           • The entries should be strictly ascending by brightness.
+           • First entry = <minBrightness,maxAlpha>.
+           • Last entry  = <maxBrightness,minAlpha>.
+    -->
+    <string-array name="config_udfpsDimmingBrightnessAlphaArray" translatable="false">
+          <item>0,255</item>
+          <item>1,250</item>
+          <item>43,245</item>
+          <item>490,240</item>
+          <item>900,230</item>
+          <item>1530,214</item>
+          <item>1880,206</item>
+          <item>2200,195</item>
+          <item>2400,186</item>
+          <item>2570,176</item>
+          <item>2680,170</item>
+          <item>3160,162</item>
+          <item>3300,142</item>
+          <item>3500,121</item>
+          <item>3535,107</item>
+          <item>4095,0</item>
+    </string-array>
 </resources>
