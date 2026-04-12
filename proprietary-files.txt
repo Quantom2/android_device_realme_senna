@@ -41,6 +41,13 @@ odm/lib/rfsa/adsp/libtfadsp_tx.so
 odm/lib/rfsa/adsp/libvdblurless_5.0.2_skel.so
 odm/lib/rfsa/adsp/libvdblurless_skel.so
 odm/lib/rfsa/adsp/libvdsuperphoto_skel.so
+vendor/lib/rfsa/adsp/libVppFrcQnnHtp
+vendor/lib/rfsa/adsp/libVppQnnHtp
+vendor/lib/rfsa/adsp/libmobilenet_dsp_frc
+vendor/lib/rfsa/adsp/libmobilenet_dsp_frc_networks
+vendor/lib/rfsa/adsp/libvpp_ais_networks
+vendor/lib/rfsa/adsp/libvpp_vqa_networks
+vendor/lib/rfsa/adsp/libvpt_action_recognition
 
 # Audio
 odm/lib64/lib_lvacfs.so
@@ -78,6 +85,7 @@ odm/etc/lvacfs_params/2mic/LVACFS_Parameter_ID8_MIC_Unprocess.txt
 odm/etc/lvacfs_params/2mic/LVACFS_Parameter_ID9_MIC_Voice.txt
 
 # Camera
+odm/bin/hw/vendor.oplus.hardware.cammidasservice-V1-service
 odm/etc/camera/3dphoto/color_depth_inpaint.dlc
 odm/etc/camera/3dphoto/midas_small_ver9_fp16_gpu.dlc
 odm/etc/camera/aicolor/duallut_background.bmp
@@ -581,6 +589,7 @@ odm/etc/camera/micFilter/curve_0.png
 odm/etc/camera/micFilter/green_orange_2.png
 odm/etc/camera/micFilter/yellow_green_1.png
 odm/etc/camera/model/DocDetectV15.xbin
+odm/etc/camera/model/license.lic
 odm/etc/camera/motionblur/model.data
 odm/etc/camera/omoji/assets/sdk_assets/ai_face_processor_e51.bundle
 odm/etc/camera/omoji/assets/sdk_assets/controller_cpp.bundle
@@ -839,6 +848,7 @@ odm/etc/camera/pfb_bin/snapProgram_blurBinary.bin
 odm/etc/camera/pfb_bin/snapProgram_bwBinary.bin
 odm/etc/camera/pfb_bin/snapSaveMaskBinary.bin
 odm/etc/camera/pfb_bin/snapSurfaceBlurBinary.bin
+odm/etc/camera/singleblur/license_release.license
 odm/etc/camera/singleblur/personseg.bin
 odm/etc/camera/singleblur/preview_seg.json
 odm/etc/camera/sticker/material/animoji/data.zip
@@ -912,6 +922,7 @@ odm/etc/camera/fwk_config.json
 odm/etc/camera/gasryuv_1.2_wp.model
 odm/etc/camera/gf.dlc
 odm/etc/camera/libiceainr_model.dlc
+odm/etc/camera/license_release_fdc.lic
 odm/etc/camera/media_profiles.xml
 odm/etc/camera/model_fdc.data
 odm/etc/camera/neon_yuv_LUT_64.bin
@@ -927,8 +938,12 @@ odm/etc/camera/simpleunet_4_3.dlc
 odm/etc/camera/simpleunet_full.dlc
 odm/etc/camera/stereoParams.bin
 odm/etc/camera/wide.bin
+odm/etc/init/init.camera_process.rc
 odm/etc/init/init.odm.camera.provider.override.rc
+odm/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc
 odm/etc/vintf/manifest/manifest_oplus_cameraextension_aidl.xml
+odm/etc/vintf/manifest/manifest_oplus_cammidasservice_aidl.xml
+odm/etc/vintf/manifest/manifest_oplus_sendextcamcmd.xml
 odm/lib64/aiboost/libQnnSystem.so
 odm/lib64/camera/components/com.oplus.node.pilot.so
 odm/lib64/camera/components/com.oplus.node.preview.so
@@ -987,6 +1002,7 @@ odm/lib64/libHIS.so
 odm/lib64/libImageWarpMask.so;FIX_SONAME
 odm/lib64/libNamaWrapper.so
 odm/lib64/libOGLManager.so
+odm/lib64/libOPAlgoCamSinglePortrait.so
 odm/lib64/libOPLUS_SCPortrait.so;FIX_SONAME
 odm/lib64/libPerfectColor.so
 odm/lib64/libPerfectlyClearCrux.so
@@ -996,6 +1012,8 @@ odm/lib64/libPolarrRender.so
 odm/lib64/libPreviewDecisionOld.so
 odm/lib64/libRedeyeReduce.so
 odm/lib64/libSNPE.so
+odm/lib64/libSchedAssistExtImpl_vendor.so
+odm/lib64/libSnpeHtpPrepare.so
 odm/lib64/libSnpeHtpV68Stub.so
 odm/lib64/libSnpeHtpV69Stub.so
 odm/lib64/libStarMode.so
@@ -1086,6 +1104,7 @@ odm/lib64/libcalculator_htp.so
 odm/lib64/libcreatebin.so
 odm/lib64/libcustomer_halalgovisual.so
 odm/lib64/libcvface_api.so
+odm/lib64/libdeccfg_sp.so
 odm/lib64/libdualcam_image_optical_zoom.so
 odm/lib64/libdualcam_optical_zoom_control.so
 odm/lib64/libdualcam_video_optical_zoom.so
@@ -1096,24 +1115,33 @@ odm/lib64/libextensionlayer.so
 odm/lib64/libfuai_vendor.so
 odm/lib64/libhwconfigurationutil.so
 odm/lib64/libhyperlapse.so
+odm/lib64/libiceainr.so
 odm/lib64/libmotionblur.so
 odm/lib64/libmpbase.so
+odm/lib64/libmsnativefilter.so
+odm/lib64/libnpu.so
+odm/lib64/libop-ai-beauty-body-detection.so
 odm/lib64/libop-ai-beauty-faceretouch-cn.so
-odm/lib64/liboplus-uah-client.so
+odm/lib64/liboplusblur_capture_api.so
 odm/lib64/liboptical_zoom_dc.so
 odm/lib64/liboptical_zoom_vs.so
 odm/lib64/libormshalclient.so
 odm/lib64/libpngwrapper.so
 odm/lib64/libpnscr2.so
+odm/lib64/libportrait_repair_ppl3_ocl.so
 odm/lib64/libremosaic_wrapper.so
+odm/lib64/libremosaiclib_s5k3p9.so;FIX_SONAME
+odm/lib64/libremosaiclib_s5kjn1.so;FIX_SONAME
 odm/lib64/librmsclib1.so
 odm/lib64/librpmbengclient.so
 odm/lib64/libsaveshaderbin.so
 odm/lib64/libsharebuffer.so
 odm/lib64/libsharebuffer_impl.so
+odm/lib64/libskyseg_image_3072p.so
 odm/lib64/libsnpe_dsp_domains_v2.so
 odm/lib64/libsnpe_dsp_domains_v3.so
 odm/lib64/libsnpe_loader.so
+odm/lib64/libssd_det.so
 odm/lib64/libstblur_api.so
 odm/lib64/libstblur_capture_api.so
 odm/lib64/libstface_fd_api.so
@@ -1123,11 +1151,14 @@ odm/lib64/libthirdcapability.so
 odm/lib64/libtriplecam_optical_zoom_control.so
 odm/lib64/libtriplecam_video_optical_zoom.so
 odm/lib64/libwatermark_photo.so
+odm/lib64/libyuv2.so
+odm/lib64/libyuvwrapper.so
 odm/lib64/vendor.oplus.hardware.cameraextension-V1-service-impl.so
 odm/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk_platform.so
 odm/lib64/vendor.oplus.hardware.commondcs-V1-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.engcamera@1.0.so
+odm/lib64/vendor.oplus.hardware.extcamera@1.0.so
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
-odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so
 odm/lib64/vendor.oplus.hardware.sendextcamcmd-V1-service-impl.so
 odm/lib64/vendor.oplus.hardware.sendextcamcmd-V2-ndk.so
 vendor/bin/hw/vendor.qti.camera.provider@2.7-service_64
@@ -1204,8 +1235,44 @@ vendor/lib64/camera/arcsoft_calibration_wt.bin
 vendor/lib64/camera/arcsoft_dc_calibration_t.bin
 vendor/lib64/camera/arcsoft_dc_calibration_u.bin
 vendor/lib64/camera/arcsoft_dc_calibration_w.bin
+vendor/lib64/camera/com.qti.sensormodule.fillmore_sunny_imx686.bin
+vendor/lib64/camera/com.qti.sensormodule.pmd_irs2381c.bin
+vendor/lib64/camera/com.qti.sensormodule.qtech_imx588.bin
+vendor/lib64/camera/com.qti.sensormodule.qtech_imx766.bin
+vendor/lib64/camera/com.qti.sensormodule.qti_tpg0.bin
+vendor/lib64/camera/com.qti.sensormodule.qti_tpg1.bin
+vendor/lib64/camera/com.qti.sensormodule.qti_tpg2.bin
+vendor/lib64/camera/com.qti.sensormodule.semco_imx363.bin
+vendor/lib64/camera/com.qti.sensormodule.sunny_imx686.bin
+vendor/lib64/camera/com.qti.sensormodule.sunny_s5k33dxx.bin
+vendor/lib64/camera/com.qti.sensormodule.sunny_s5k3m5.bin
+vendor/lib64/camera/com.qti.sensormodule.sunny_s5kjd1sp.bin
+vendor/lib64/camera/com.qti.sensormodule.truly_imx563.bin
+vendor/lib64/camera/com.qti.sensormodule.truly_s5kjd1sp.bin
+vendor/lib64/camera/com.qti.sensorsocmap.socid_map.bin
+vendor/lib64/camera/com.qti.tuned.default.bin
+vendor/lib64/camera/com.qti.tuned.fillmore_default.bin
+vendor/lib64/camera/com.qti.tuned.fillmore_qtech_imx766.bin
+vendor/lib64/camera/com.qti.tuned.fillmore_sunny_imx686.bin
+vendor/lib64/camera/com.qti.tuned.fillmore_sunny_s5k3m5.bin
+vendor/lib64/camera/com.qti.tuned.fillmore_sunny_s5kjd1sp.bin
+vendor/lib64/camera/com.qti.tuned.fillmore_truly_s5kjd1sp.bin
+vendor/lib64/camera/com.qti.tuned.qtech_imx766.bin
+vendor/lib64/camera/com.qti.tuned.semco_imx363.bin
+vendor/lib64/camera/com.qti.tuned.sunny_imx686.bin
+vendor/lib64/camera/com.qti.tuned.sunny_s5k3m5.bin
+vendor/lib64/camera/com.qti.tuned.sunny_s5kjd1sp.bin
+vendor/lib64/camera/com.qti.tuned.truly_imx563.bin
+vendor/lib64/camera/com.qti.tuned.truly_s5kjd1sp.bin
+vendor/lib64/camera/fdconfigpreview.bin
+vendor/lib64/camera/fdconfigpreviewlite.bin
+vendor/lib64/camera/fdconfigvideo.bin
+vendor/lib64/camera/fdconfigvideolite.bin
+vendor/lib64/camera/imx588.pb
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
+vendor/lib64/libRGBC.so:odm/lib64/libRGBC.so
+vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camx.device@3.2-impl.so
 vendor/lib64/camx.device@3.3-impl.so
 vendor/lib64/camx.device@3.4-ext-impl.so
@@ -1263,7 +1330,6 @@ vendor/lib64/com.qualcomm.mcx.linearmapper.so
 vendor/lib64/com.qualcomm.mcx.policy.mfl.so
 vendor/lib64/com.qualcomm.mcx.policy.xr.so
 vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
-vendor/lib64/libRGBC.so
 vendor/lib64/libSonyIMX471RmscLibrary.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaidenoiserv2.so
@@ -1289,12 +1355,14 @@ vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libhdr10plus.so
+vendor/lib64/libhme.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libipebpsstriping480.so
 vendor/lib64/libjpege.so
 vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmfGhostDetection.so
+vendor/lib64/libmfec.so
 vendor/lib64/libmidasserviceintf.so
 vendor/lib64/libmidasserviceintf_aidl.so
 vendor/lib64/libmmcamera_bestats.so
@@ -1311,11 +1379,15 @@ vendor/lib64/libqll.so
 vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
 vendor/lib64/libqshcamera.so
+vendor/lib64/libqvr_cam_cdsp_driver_stub.so
+vendor/lib64/libqvrcamera_client.qti.so
 vendor/lib64/libsfeShiftExtrapolation.so
+vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libsynx.so
 vendor/lib64/libtfestriping.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libubifocus.so
+vendor/lib64/libvideoml.so
 vendor/lib64/vendor.oplus.hardware.cameraextension-V1-ndk_platform.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 vendor/lib64/vendor.oplus.hardware.sendextcamcmd-V2-ndk_platform.so
@@ -1490,6 +1562,7 @@ odm/etc/sensor/config/waipio_qrd_oplus_flight_detect.json
 odm/etc/sensor/config/waipio_qrd_palm.json
 odm/etc/sensor/config/waipio_qrd_pocket.json
 odm/etc/sensor/sensor_config.json
+odm/etc/sensor.cfg
 odm/firmware/cs_press.bin
 vendor/lib64/sensors.ssc.so
 
@@ -1505,6 +1578,7 @@ vendor/etc/media_profiles_vendor.xml
 vendor/lib64/vendor.oplus.hardware.olc2-V1-ndk_platform.so
 
 # Display (HWC)
+vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/libPanelChaplin.so
 
 # Display (Pixelworks)
@@ -1514,12 +1588,13 @@ odm/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc
 odm/etc/vintf/manifest/vendor.pixelworks.hardware.display.iris-service.xml
 odm/etc/vintf/manifest/vendor.pixelworks.hardware.feature.irisfeature-service.xml
 odm/lib64/libpwirisIoctlWrapper.so
+odm/lib64/libpwirisPCS.so
 odm/lib64/libpwiriscalibrate.so
+odm/lib64/libpwirispq.so
 odm/lib64/libpwirisservice.so
 odm/lib64/libpwirissoft.so
 odm/lib64/libpwsoftirisPCS.so
 odm/lib64/libsnapdragoncolor-pxlw.so
-vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/libpwirisfeature.so
 vendor/lib64/libpwirishalwrapper.so
 vendor/lib64/vendor.pixelworks.hardware.display@1.0.so
@@ -1527,8 +1602,6 @@ vendor/lib64/vendor.pixelworks.hardware.display@1.1.so
 vendor/lib64/vendor.pixelworks.hardware.display@1.2.so
 vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so
 vendor/lib64/vendor.pixelworks.hardware.feature@1.1.so
-odm/lib64/libpwirispq.so
-odm/lib64/libpwirisPCS.so
 
 # Iris
 odm/etc/inparm/iris5/inParm10.txt
