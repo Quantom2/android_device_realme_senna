@@ -1512,7 +1512,7 @@ odm/etc/tm1240_tm_nt37705_eyeprotect_data.xml
 odm/etc/tm1240_tm_nt37705_srgb_eyeprotect_data.xml
 
 # Fingerprint (service) - from salami 11.F.68
-odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff|0ded362198f669f38239f52c3bc526eaf55aca12|0ded362198f669f38239f52c3bc526eaf55aca12
+odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff|0ded362198f669f38239f52c3bc526eaf55aca12|249978d107a5e98f484b1b51f87bb098b7710789
 odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc|c9f6b44fe71d532f87475d3c6a601bd2b14fb2f8
 odm/etc/vintf/manifest/manifest_oplus_fingerprint_aidl_v2.xml|9dd836cdef719daf48d5bce7ff1fa5cfeeba78f2
 

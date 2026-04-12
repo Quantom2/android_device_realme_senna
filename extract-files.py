@@ -43,7 +43,7 @@ blob_fixups: blob_fixups_user_type = {
     'odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini': blob_fixup()
         .regex_replace('BandCapability=3', ''),
     'odm/lib64/libAlgoProcess.so': blob_fixup()
-        .replace_needed('android.hardware.graphics.common-V2-ndk_platform.so', 'android.hardware.graphics.common-V6-ndk.so')
+        .replace_needed('android.hardware.graphics.common-V2-ndk_platform.so', 'android.hardware.graphics.common-V7-ndk.so')
         .replace_needed('vendor.oplus.hardware.osense.client-V1-ndk_platform.so', 'vendor.oplus.hardware.osense.client-V1-ndk.so'),
     ('odm/lib64/libaps_frame_registration.so', 'odm/lib64/libCOppLceTonemapAPI.so', 'odm/lib64/libCS.so', 'odm/lib64/libSuperRaw.so', 'odm/lib64/libYTCommon.so', 'odm/lib64/libyuv2.so'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
@@ -53,6 +53,21 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('vendor.oplus.hardware.commondcs-V1-ndk_platform.so', 'vendor.oplus.hardware.commondcs-V1-ndk.so')
         .replace_needed('vendor.oplus.hardware.touch-V1-ndk_platform.so', 'vendor.oplus.hardware.touch-V1-ndk.so')
         .add_needed('libshims_aidl_fingerprint_v2.oplus.so'),
+    (
+        'odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff',
+        'vendor/bin/hw/vendor.qti.camera.provider@2.7-service_64',
+        'vendor/lib64/camx.provider@2.6-legacy.so',
+        'vendor/lib64/camx.device@3.4-ext-impl.so',
+        'vendor/lib64/camx.provider@2.4-external.so',
+        'vendor/lib64/camx.provider@2.4-legacy.so',
+        'vendor/lib64/camx.provider@2.4-impl.so',
+        'vendor/lib64/camx.device@3.5-ext-impl.so',
+        'vendor/lib64/camx.provider@2.5-legacy.so',
+        'vendor/lib64/camx.provider@2.7-legacy.so',
+        'vendor/lib64/camx.provider@2.5-external.so',
+        'vendor/lib64/camx.device@3.6-ext-impl.so',
+    ): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'odm/lib64/libolc_vnd.so': blob_fixup()
         .replace_needed('vendor.oplus.hardware.touch-V1-ndk_platform.so', 'vendor.oplus.hardware.touch-V1-ndk.so')
         .replace_needed('vendor.oplus.hardware.olc2-V1-ndk_platform.so', 'vendor.oplus.hardware.olc2-V2-ndk.so'),
