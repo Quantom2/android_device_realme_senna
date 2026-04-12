@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd ../../../
+cd ../../../../
 
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
@@ -48,6 +48,9 @@ repopick -f 466887 -P hardware/qcom-caf/sm8450/audio/primary-hal
 # Add support to set vendor tag package 
 # https://review.lineageos.org/c/LineageOS/android_frameworks_av/+/455597
 #repopick -f 455597 -P frameworks/av
+cd vendor/oneplus/sm8450-common
+git checkout 37cb2da89559e704b14086c40c0faa7b1cf0b248 --force
+cd ../../../
 
 cd device/oneplus/sm8450-common/vibrator/aidl
 
