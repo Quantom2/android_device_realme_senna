@@ -39,15 +39,23 @@ repopick -f 466887 -P hardware/qcom-caf/sm8450/audio/primary-hal
 
 # Add oplus packages to allowed list
 # https://review.lineageos.org/c/LineageOS/android_build_soong/+/449821
-#repopick -f 449821 -P build/soong
+repopick -f 449821 -P build/soong
 
 # add support in frameworks/av
 # https://review.lineageos.org/c/LineageOS/android_frameworks_av/+/455598
-#repopick -f 455598 -P frameworks/av
+repopick -f 455598 -P frameworks/av
 
 # Add support to set vendor tag package 
 # https://review.lineageos.org/c/LineageOS/android_frameworks_av/+/455597
-#repopick -f 455597 -P frameworks/av
+repopick -f 455597 -P frameworks/av
+
+# Rebase pjgowtham's usefull commits
+cd frameworks/base
+git remote add pj https://github.com/pjgowtham/android_frameworks_base
+git fetch pj
+git checkout pj/lineage-23.2
+git rebase github/lineage-23.2
+
 cd vendor/oneplus/sm8450-common
 git checkout 37cb2da89559e704b14086c40c0faa7b1cf0b248 --force
 cd ../../../
