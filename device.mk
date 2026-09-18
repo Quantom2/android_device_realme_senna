@@ -9,7 +9,7 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Audio
-QCV_FAMILY_SKUS := taro cape ukee
+QCV_FAMILY_SKUS := taro cape
 
 PRODUCT_COPY_FILES += \
 $(foreach DEVICE_SKU, $(QCV_FAMILY_SKUS), \
