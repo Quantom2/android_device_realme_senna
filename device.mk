@@ -53,6 +53,22 @@ PRODUCT_PACKAGES += \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/odm/22624/odm/firmware/fastchg/22624/charging_hyper_mode_config.txt:$(TARGET_COPY_OUT_ODM)/22624/odm/firmware/fastchg/22624/charging_hyper_mode_config.txt \
+    $(LOCAL_PATH)/recovery/root/odm/22624/odm/firmware/fastchg/22624/bms_heating_config.txt:$(TARGET_COPY_OUT_ODM)/22624/odm/firmware/fastchg/22624/bms_heating_config.txt \
+    $(LOCAL_PATH)/recovery/root/odm/22624/odm/firmware/fastchg/22624/charging_thermal_config_default.txt:$(TARGET_COPY_OUT_ODM)/22624/odm/firmware/fastchg/22624/charging_thermal_config_default.txt \
+    $(LOCAL_PATH)/recovery/root/odm/22624/odm/firmware/fastchg/charging_thermal_config_default.txt:$(TARGET_COPY_OUT_ODM)/22624/odm/firmware/fastchg/charging_thermal_config_default.txt \
+    $(LOCAL_PATH)/recovery/root/odm/22624/odm/firmware/fastchg/smart_chg_config_table.txt:$(TARGET_COPY_OUT_ODM)/22624/odm/firmware/fastchg/smart_chg_config_table.txt \
+    $(LOCAL_PATH)/recovery/root/odm/22625/odm/firmware/fastchg/22625/charging_hyper_mode_config.txt:$(TARGET_COPY_OUT_ODM)/22625/odm/firmware/fastchg/22625/charging_hyper_mode_config.txt \
+    $(LOCAL_PATH)/recovery/root/odm/22625/odm/firmware/fastchg/22625/bms_heating_config.txt:$(TARGET_COPY_OUT_ODM)/22625/odm/firmware/fastchg/22625/bms_heating_config.txt \
+    $(LOCAL_PATH)/recovery/root/odm/22625/odm/firmware/fastchg/22625/charging_thermal_config_default.txt:$(TARGET_COPY_OUT_ODM)/22625/odm/firmware/fastchg/22625/charging_thermal_config_default.txt \
+    $(LOCAL_PATH)/recovery/root/odm/22625/odm/firmware/fastchg/charging_thermal_config_default.txt:$(TARGET_COPY_OUT_ODM)/22625/odm/firmware/fastchg/charging_thermal_config_default.txt \
+    $(LOCAL_PATH)/recovery/root/odm/22625/odm/firmware/fastchg/smart_chg_config_table.txt:$(TARGET_COPY_OUT_ODM)/22625/odm/firmware/fastchg/smart_chg_config_table.txt \
+    $(LOCAL_PATH)/recovery/root/odm/226B2/odm/firmware/fastchg/226B2/charging_hyper_mode_config.txt:$(TARGET_COPY_OUT_ODM)/226B2/odm/firmware/fastchg/226B2/charging_hyper_mode_config.txt \
+    $(LOCAL_PATH)/recovery/root/odm/226B2/odm/firmware/fastchg/226B2/bms_heating_config.txt:$(TARGET_COPY_OUT_ODM)/226B2/odm/firmware/fastchg/226B2/bms_heating_config.txt \
+    $(LOCAL_PATH)/recovery/root/odm/226B2/odm/firmware/fastchg/226B2/charging_thermal_config_default.txt:$(TARGET_COPY_OUT_ODM)/226B2/odm/firmware/fastchg/226B2/charging_thermal_config_default.txt \
+    $(LOCAL_PATH)/recovery/root/odm/226B2/odm/firmware/fastchg/charging_thermal_config_default.txt:$(TARGET_COPY_OUT_ODM)/226B2/odm/firmware/fastchg/charging_thermal_config_default.txt \
+    $(LOCAL_PATH)/recovery/root/odm/226B2/odm/firmware/fastchg/smart_chg_config_table.txt:$(TARGET_COPY_OUT_ODM)/226B2/odm/firmware/fastchg/smart_chg_config_table.txt
 # Power
 $(call soong_config_set,qtipower,mode_ext_lib,power-ext-oplus)
 

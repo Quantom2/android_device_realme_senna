@@ -1852,19 +1852,6 @@ odm/etc/wifi/wifisar.cfg
 odm/etc/nfc/libnfc-nci.conf_216AC:vendor/etc/libnfc-nci.conf
 odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_68:vendor/firmware/sn100u.bin
 
-# Charher firmware from RMX3706/3708/3709 15.0.0.510 versions
-odm/firmware/fastchg/22624/bms_heating_config.txt|1deef85ff7c617f7ce6bcdd38d0b7b49904420de
-odm/firmware/fastchg/22624/charging_hyper_mode_config.txt|a2d36a8d4b7a49f68ba75954524bdd7c2836a10e
-odm/firmware/fastchg/22624/charging_thermal_config_default.txt|4dbeadd0f4c242b8d13486547c65b910c4fbe7fc
-odm/firmware/fastchg/22625/bms_heating_config.txt|1deef85ff7c617f7ce6bcdd38d0b7b49904420de
-odm/firmware/fastchg/22625/charging_hyper_mode_config.txt|6277813217b44bd64d5903178c410edd7d690451
-odm/firmware/fastchg/22625/charging_thermal_config_default.txt|29c268685044c1f716b5460106c07f3fab7b1da0
-odm/firmware/fastchg/226B2/bms_heating_config.txt|1deef85ff7c617f7ce6bcdd38d0b7b49904420de
-odm/firmware/fastchg/226B2/charging_hyper_mode_config.txt|54475375ba3860dfc622e02c5b28d737783bb72f
-odm/firmware/fastchg/226B2/charging_thermal_config_default.txt|b19027a470137d67f8fa403c57c0abff35a1e96e
-odm/firmware/fastchg/charging_thermal_config_default.txt
-odm/firmware/fastchg/smart_chg_config_table.txt
-
 # Keys
 vendor/etc/cacert_location.pem
 vendor/etc/xtra_root_cert.pem
