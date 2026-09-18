@@ -88,7 +88,8 @@ $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch/
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/pixelworks/interfaces
     
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8450-common/common.mk)

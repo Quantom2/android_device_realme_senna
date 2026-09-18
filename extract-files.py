@@ -21,9 +21,11 @@ from extract_utils.main import (
 namespace_imports = [
     'hardware/oplus',
     'hardware/qcom-caf/sm8450',
+    'hardware/pixelworks/interfaces',
     'vendor/oneplus/sm8450-common',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
+    'device/realme/senna',
 ]
 
 
