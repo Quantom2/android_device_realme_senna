@@ -17,7 +17,7 @@ repopick -f 432431 -P hardware/qcom-caf/sm8450/display
 
 # Iris5 patch
 cd hardware/qcom-caf/sm8450/display
-patch -p1 < ../../../../device/realme/senna/patches/iris5.patch
+patch -p1 < ../../../../device/realme/senna/patches/iris.patch
 
 cd ../../../../
 
@@ -51,9 +51,5 @@ repopick -f 466887 -P hardware/qcom-caf/sm8450/audio/primary-hal
 cd vendor/oneplus/sm8450-common
 git checkout 37cb2da89559e704b14086c40c0faa7b1cf0b248 --force
 cd ../../../
-
-cd device/oneplus/sm8450-common/vibrator/aidl
-
-./patch_framework.sh
 
 echo "> Done!"
