@@ -7,3 +7,17 @@ runtime_resource_overlay {
     name: "OPlusFrameworksResTarget",
     device_specific: true,
 }
+
+runtime_resource_overlay {
+    name: "OPlusFrameworksResTargetBigBattery",
+    manifest: "AndroidManifest-BigBattery.xml",
+    resource_dirs: ["res-BigBat"],
+    device_specific: true,
+}
+
+runtime_resource_overlay {
+    name: "OPlusFrameworksResTargetSE",
+    manifest: "AndroidManifest-SE.xml",
+    resource_dirs: ["res-SE"],
+    device_specific: true,
+}

@@ -7,3 +7,10 @@ runtime_resource_overlay {
     name: "OPlusSettingsProviderResTarget",
     device_specific: true,
 }
+
+runtime_resource_overlay {
+    name: "OPlusSettingsProviderResTargetSE",
+    manifest: "AndroidManifest-SE.xml",
+    resource_dirs: ["res-SE"],
+    device_specific: true,
+}

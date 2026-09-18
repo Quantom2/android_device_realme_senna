@@ -27,7 +27,7 @@
     OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
     IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 -->
-<!-- project:22625 -->
+<!-- project:22623 -->
 
 <device name="Android">
   <!-- Most values are the incremental current used by a feature,
@@ -137,8 +137,8 @@
       <value>1996800</value>  <!-- 2112  MHz CPU speed -->
       <value>2112000</value>  <!-- 2227  MHz CPU speed -->
       <value>2227200</value>  <!-- 2342  MHz CPU speed -->
-      <value>2342400</value>  <!-- 2419  MHz CPU speed -->	  
-      <value>2496000</value>  <!-- 2419  MHz CPU speed -->	  	  
+      <value>2342400</value>  <!-- 2419  MHz CPU speed -->
+      <value>2496000</value>  <!-- 2419  MHz CPU speed -->	  
   </array>
 
   <array name="cpu.core_speeds.cluster2">
@@ -158,10 +158,9 @@
       <value>2361600</value>  <!-- 2380  MHz CPU speed -->
       <value>2476800</value>  <!-- 2496  MHz CPU speed -->
       <value>2592000</value>  <!-- 2592  MHz CPU speed -->
-      <value>2707200</value>  <!-- 2688  MHz CPU speed -->
-      <value>2822400</value>  <!-- 2764  MHz CPU speed -->
-      <value>2918400</value>  <!-- 2841  MHz CPU speed -->
-      <value>2995200</value>  <!-- 2841  MHz CPU speed -->	    	  
+      <value>2707200</value>  <!-- 2496  MHz CPU speed -->
+      <value>2822400</value>  <!-- 2592  MHz CPU speed -->
+      <value>2918400</value>  <!-- 2496  MHz CPU speed -->
   </array>
 
   <!-- Current at each CPU speed for cluster 0, as per 'cpu.speeds.cluster0'.
@@ -172,6 +171,7 @@
       <value>25</value>   <!-- ~5 mA -->
       <value>27</value>   <!-- ~6 mA -->
       <value>28</value>   <!-- ~6 mA -->
+      <value>31</value>   <!-- ~6 mA -->
       <value>34</value>   <!-- ~7 mA -->
       <value>37</value>   <!-- ~8 mA -->
       <value>41</value>   <!-- ~9 mA -->
@@ -181,7 +181,6 @@
       <value>58</value>  <!-- ~15mA -->
       <value>70</value>  <!-- ~17mA -->
       <value>73</value>  <!-- ~20mA -->
-      <value>77</value>  <!-- ~22mA -->
   </array>
 
   <!-- Current at each CPU speed for cluster 1, as per 'cpu.speeds.cluster1'.
@@ -203,8 +202,8 @@
       <value>183</value>  <!-- ~182mA -->
       <value>216</value>  <!-- ~213mA -->
       <value>247</value>  <!-- ~259mA -->
-      <value>288</value>  <!-- ~266mA -->	  
-      <value>319</value>  <!-- ~266mA -->	  	  
+      <value>288</value>  <!-- ~266mA -->
+      <value>302</value>  <!-- ~266mA -->	  
   </array>
 
   <!-- Current at each CPU speed for cluster 2, as per 'cpu.speeds.cluster2'.
@@ -216,21 +215,20 @@
       <value>103</value>   <!-- ~55 mA -->
       <value>116</value>   <!-- ~68 mA -->
       <value>136</value>   <!-- ~74 mA -->
-      <value>150</value>   <!-- ~88 mA -->
+      <value>150</value>   <!-- ~101mA -->
       <value>161</value>   <!-- ~101mA -->
       <value>177</value>   <!-- ~120mA -->
       <value>191</value>   <!-- ~135mA -->
       <value>216</value>   <!-- ~151mA -->
       <value>238</value>   <!-- ~173mA -->
+      <value>252</value>   <!-- ~201mA -->
       <value>292</value>   <!-- ~253mA -->
-      <value>354</value>   <!-- ~287mA -->
-      <value>371</value>   <!-- ~330mA -->
-      <value>429</value>   <!-- ~386mA -->
-      <value>499</value>   <!-- ~419mA -->
-      <value>555</value>   <!-- ~449mA -->
-      <value>615</value>   <!-- ~502mA -->
-      <value>635</value>   <!-- ~502mA -->	  
-      <value>650</value>   <!-- ~502mA -->	  	  
+      <value>371</value>   <!-- ~287mA -->
+      <value>429</value>   <!-- ~330mA -->
+      <value>499</value>   <!-- ~386mA -->
+      <value>555</value>   <!-- ~386mA -->
+      <value>615</value>   <!-- ~386mA -->
+      <value>650</value>   <!-- ~386mA -->  
   </array>
 
   <!-- Current when CPU is awake -->
@@ -245,7 +243,7 @@
   </array>
 
   <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
-  <item name="battery.capacity">4600</item>
+  <item name="battery.capacity">5500</item>
 
   <!-- Wifi related values. -->
   <!-- Idle Receive current for wifi radio in mA. 0 by default-->
