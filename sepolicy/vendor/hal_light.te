@@ -1,3 +1,13 @@
-# Lights HAL permissions
+# Lights HAL basic permissions
 allow hal_light_default sysfs:file { read write open getattr };
 allow hal_light_default sysfs_leds:file { read write open getattr };
+
+# Lights HAL battery status permissions
+allow hal_light_default vendor_sysfs_battery_supply:file { r_file_perms };
+allow hal_light_default vendor_sysfs_battery_supply:dir { r_dir_perms };
+
+allow hal_light_default vendor_sysfs_usb_supply:file { r_file_perms };
+allow hal_light_default vendor_sysfs_usb_supply:dir { r_dir_perms };
+
+# Lights HAL boot prop permission
+get_prop(hal_light_default, boot_status_prop)

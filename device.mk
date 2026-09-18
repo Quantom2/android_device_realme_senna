@@ -58,7 +58,7 @@ $(call soong_config_set,qtipower,mode_ext_lib,power-ext-oplus)
 
 # Leds
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.oplus
+    android.hardware.light-service.senna
 
 # IR
 PRODUCT_COPY_FILES += \

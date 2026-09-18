@@ -16,7 +16,6 @@ TARGET_KERNEL_CONFIG += vendor/oplus/senna.config
 TARGET_SCREEN_DENSITY := 450
 
 # Leds
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/framework_compatibility_matrix.xml
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Partitions
