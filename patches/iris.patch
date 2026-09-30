@@ -1,7 +1,20 @@
-Subject: [PATCH] hwc: Add Iris5 support for Senna
-Add Iris7 support  for Udon
-<+>UTF-8
-===================================================================
+commit 2f5c00441b78d17d3476c6b9edc6bf847d8f4598
+Author: Quantom2 <quantom2.dev@proton.me>
+Date:   Sun Sep 27 22:05:04 2026 +0300
+
+    sdm: Support Pixelworks hardware-based iris color calibration
+    
+    Fixes display color calibration with devices that have Pixelworks
+    hardware iris chip (senna, and in theory udon). Switching color
+    modes with stock render intents now work with this change.
+    
+    This commit supports both iris5 and iris7 via flags in device specific
+    trees: $(call soong_config_set,qtidisplay,pxlw_hw_iris5,true)
+    or $(call soong_config_set,qtidisplay,pxlw_hw_iris7,true)
+    Depending on what hardware it has
+    
+    Change-Id: I5f7768c77aae7827be6a845a50fb661bbef93857
+
 diff --git a/composer/Android.bp b/composer/Android.bp
 index 1e847ba419..02ce0d6ffd 100644
 --- a/composer/Android.bp
@@ -24,7 +37,7 @@ index 1e847ba419..02ce0d6ffd 100644
  
      shared_libs: [
 diff --git a/composer/hwc_display_builtin.cpp b/composer/hwc_display_builtin.cpp
-index 0d4e332322..29f4ca8974 100644
+index 6eeea2a45e..da4c35a582 100644
 --- a/composer/hwc_display_builtin.cpp
 +++ b/composer/hwc_display_builtin.cpp
 @@ -485,10 +485,22 @@ HWC2::Error HWCDisplayBuiltIn::SetColorModeWithRenderIntent(ColorMode mode, Rend
