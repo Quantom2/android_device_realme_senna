@@ -1843,6 +1843,14 @@ odm/etc/wifi/regdb_version
 odm/etc/wifi/sar-vendor-cmd.xml
 odm/etc/wifi/wifisar.cfg
 
+# Neural networks
+odm/lib64/QNN_lib/libQnnHtp.so
+odm/lib64/QNN_lib/libQnnHtpPrepare.so
+odm/lib64/QNN_lib/libQnnHtpV69Stub.so
+odm/lib64/aiboost/libQnnHtp.so;MODULE_SUFFIX=.aiboost
+odm/lib64/aiboost/libQnnHtpPrepare.so;MODULE_SUFFIX=.aiboost
+odm/lib64/aiboost/libQnnHtpV69Stub.so;MODULE_SUFFIX=.aiboost
+
 # NFC
 odm/etc/nfc/libnfc-nci.conf_216AC:vendor/etc/libnfc-nci.conf
 odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_68:vendor/firmware/sn100u.bin
