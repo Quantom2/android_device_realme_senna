@@ -1145,8 +1145,7 @@ odm/lib64/libsnpe_loader.so
 odm/lib64/libssd_det.so
 odm/lib64/libstblur_api.so
 odm/lib64/libstblur_capture_api.so
-odm/lib64/libstface_fd_api.so
-odm/lib64/libstfaceunlockocl.so
+#odm/lib64/libstface_fd_api.so
 odm/lib64/libstfd_mobile_api.so
 odm/lib64/libthirdcapability.so
 odm/lib64/libtriplecam_optical_zoom_control.so
@@ -1476,6 +1475,21 @@ odm/etc/tm1240_tm_nt37705_dvt_id05_srgb_eyeprotect_data.xml
 odm/etc/tm1240_tm_nt37705_dvt_srgb_eyeprotect_data.xml
 odm/etc/tm1240_tm_nt37705_eyeprotect_data.xml
 odm/etc/tm1240_tm_nt37705_srgb_eyeprotect_data.xml
+
+# Face unlock
+odm/lib64/libstfaceunlockocl.so
+
+# Face unlock firmware
+odm/vendor/firmware/facereg.mdt
+odm/vendor/firmware/facereg.b00
+odm/vendor/firmware/facereg.b01
+odm/vendor/firmware/facereg.b02
+odm/vendor/firmware/facereg.b03
+odm/vendor/firmware/facereg.b04
+odm/vendor/firmware/facereg.b05
+odm/vendor/firmware/facereg.b06
+odm/vendor/firmware/facereg.b07
+odm/vendor/firmware/facereg.b08
 
 # Fingerprint (service) - from salami 11.F.68
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff|0ded362198f669f38239f52c3bc526eaf55aca12|249978d107a5e98f484b1b51f87bb098b7710789
