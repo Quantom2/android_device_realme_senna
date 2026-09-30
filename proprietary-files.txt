@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from realme GT Neo5 150w (RMX3706_15.0.0.510(CN01)).
+## are from realme GT Neo5 150w (RMX3706_16.0.3.501(CN01)).
 
 # Current blobs with ELF checks disabled:
 
